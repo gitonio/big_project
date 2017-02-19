@@ -1,0 +1,45 @@
+
+<fieldset>
+  <legend>Add Product:</legend>
+  <table>
+    <tr>
+        <td><span for="affiliate">Affiliate name:</span></td>
+        <td><input type="text" id="affiliate" placeholder="walmart" ng-model="newAffiliate"/></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><span for="affiliate_id">Affiliate id:</span></td>
+        <td><input type="text" id="affiliate_id" placeholder="1" ng-model="newAffiliateId"/></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><span for="id">Id:</span></td>
+        <td><input type="number" id="id" placeholder="1" ng-model="newId"/></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><span for="name">Name:</span></td>
+        <td><input type="text" id="name" placeholder="Shirt" ng-model="newName"/></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><span for="price">Price in wei:</span></td>
+        <td><input type="number" id="price" placeholder="100" ng-model="newPrice"/></td>
+        <td></td>
+        <td><button id="addProduct" ng-click="addProduct(newId, newName, newPrice, newAffiliate, newAffiliateId)">Add</button></td>
+    <tr>
+  </table>
+</fieldset>
+<br>
+
+
+<fieldset>
+    <legend>Product List:</legend>
+<div class="list-group">
+    <admin-products product-object="product" delete-product-function="deleteProduct(aproduct.id)" ng-repeat="product in products"></admin-products>
+    </div>
+</fieldset>
